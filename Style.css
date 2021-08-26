@@ -1,0 +1,220 @@
+body{
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC, rgb(204, 204, 255));
+    padding: 1rem;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+h1,
+p {
+    margin: 0;
+}
+
+/*the base of layout*/  
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.6rem;
+    grid-row-gap: 2rem;
+    
+}  
+
+.picture-content {
+   grid-column: 1/2;
+   display: flex;
+   justify-content:flex-end; 
+    
+}
+
+.loggin-content {
+    grid-column: 2/3;
+    
+    
+}
+
+/*picture*/
+.picture-img {
+    border-radius: 3em;
+    width: 23rem;
+    height: 37rem;
+}
+
+/*loggin card*/
+.loggin-card{
+    background-color: #fFFF;
+    height: 24rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    border-radius: 0.02rem;
+    border: 0.01rem solid rgba(128, 128, 128, 0.473);
+    
+}
+/*title of the loggin card*/
+h1{
+    font-size: 2.8rem; 
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+
+.loggin-title{
+    display: flex;
+    height: 48vh;
+    align-items: center;
+}
+
+/*form of loggin card*/
+
+.loggin-form {
+  display: flex;
+  flex-direction: column;
+  width: 16.5rem;
+  height: 50vh;
+  justify-content: space-around;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  
+}
+
+input[type=text] {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.72rem;
+    background-color: rgba(219, 219, 219, 0.178);
+    border: 1px solid rgba(128, 128, 128, 0.445);
+    
+}
+
+input[type=password] {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.72rem;
+    background-color: rgba(219, 219, 219, 0.178);
+    border: 1px solid rgba(128, 128, 128, 0.445);
+}
+
+input[type=submit] {
+    width: 100%;
+    height: 1.7rem;
+    margin-top: 0.7rem;
+    background-color: rgba(173, 216, 230, 0.938);
+    border: 2px solid lightblue;
+    color: #fFFF;
+}
+
+
+/*circle and lines of loggin card*/
+.loggin-bottom {
+   color: rgb(0, 0, 0);
+   font-size: 0.54rem;
+   height: 18vh;
+   width: 22vw;
+   display: flex;
+   justify-content: center;
+   justify-content: space-evenly;
+   align-items: center;
+   
+}
+
+.loggin-bottom::before{
+    content: '';
+    width: 7rem;
+    background-color: rgba(128, 128, 128, 0.308);
+    height: 0.01rem;
+}
+
+.loggin-bottom::after{
+    content: '';
+    width: 7rem;
+    background-color: rgba(128, 128, 128, 0.308);
+    height: 0.01rem;
+}
+
+/*the footer of loggin card*/
+ 
+.loggin-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 35vh;
+    align-items: center;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+.loggin-facebook{
+    display: flex;
+    justify-content: space-around;
+    width: 13rem;
+    height: 2vh;
+    
+}
+
+.loggin-questions__facebook{
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    font-size: 0.88rem;
+    color: rgba(3, 3, 83, 0.801);
+    font-weight: 600;
+}
+
+.fab{
+    font-size: 1.2rem;
+    color: rgba(0, 0, 139, 0.705);
+}
+
+.loggin-questions__password{
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.74rem;
+    color: #262626;
+
+}
+
+.loggin-questions__facebook, .fab, .loggin-questions__password, .registrate-word:hover{
+    cursor: pointer;
+}
+
+/*last question in the footer for registration*/
+
+.loggin-registrate{
+    width: 22rem;
+    height: 4rem;
+    background-color: #fFFF;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(128, 128, 128, 0.473);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+.registrate{
+    display: flex;
+    justify-content: center;
+}
+
+.registrate-word{
+    color: rgb(39, 168, 177);
+    padding-left: 0.2rem;
+    font-weight: 500;
+}
+
+@media all and (max-width:1000px){
+    #content{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+
+    }
+
+
+}
+
